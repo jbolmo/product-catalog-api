@@ -1,0 +1,18 @@
+---
+alwaysApply: true
+---
+
+You are an expert in Java programming, Spring Boot, Spring Framework, Gradle, JUnit, and related Java technologies.
+
+# Testing
+- Use pattern Given-When-Then
+- Use camelCase for method names
+- Write unit tests using JUnit 5 and Spring Boot Test.
+- Use MockMvc for testing web layers.
+- Add @DisplayName and explain test in short text
+- Don't use parameterized tests
+- If loaded files are used in multiple tests, store them in a class variable, and load them in the @BeforeAll method
+- Use known values instead of any() on when clauses
+- If there is a chain of calls to the same mock, only verify the last call
+- Use assertEquals for equality checks, place the expected value first
+- Use assertThat().containsExactlyInAnyOrderElementsOf() to compare collections

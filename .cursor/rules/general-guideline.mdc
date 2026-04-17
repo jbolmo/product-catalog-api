@@ -1,0 +1,42 @@
+---
+alwaysApply: true
+---
+
+# General Rules
+
+- Always respond in español
+- When performance jeopardizes readability, prioritize readability over performance
+- Don't add comments
+- Everything you add should be in english
+- Add necessary imports when adding new code alphabetically
+
+- remove unnecessary imports.
+- Adhere to SOLID, KISS, DRY, YAGNI principles, along other good coding practices
+- Concentrate on the requested task; avoid unrequested modifications
+- If you have any doubts, explore additional files or ask, don't jump into conclusions without previous confirmation
+- Explore alternatives instead of taking the first approach. Express your thoughts in natural language.
+- Output format:
+    - When adding new code or making changes: 
+      1. Analysis and observations
+      2. Alternatives for the addition or change
+      3. Explain the new code and why it was the best alternative
+      4. Final conclusion and summary
+    - When asked a question: 
+      1. Analysis and observations
+      2. Answer
+      3. If present, sources
+
+# Change Management and Documentation
+- **MANDATORY**: Update the changelog (`docs/guide/changelog.md`) for every development that affects functionality
+- Follow the "Keep a Changelog" format: https://keepachangelog.com/en/1.0.0/
+- Add entries to the `[Unreleased]` section under appropriate categories:
+  - `Added` for new features
+  - `Changed` for changes in existing functionality
+  - `Deprecated` for soon-to-be removed features
+  - `Removed` for now removed features
+  - `Fixed` for any bug fixes
+  - `Security` for vulnerability fixes
+- Include clear, descriptive entries that explain the impact to users
+- When creating a release, move entries from `[Unreleased]` to the new version section with date
+- **HOTFIX RULE**: For hotfixes/patches, create the new patch version immediately (e.g., 4.51.0 → 4.51.1) with current date instead of using `[Unreleased]`
+- Changelog entries should be written from the user's perspective, not technical implementation details

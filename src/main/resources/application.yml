@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: gapsi-product-catalog
+    threads:
+        virtual:
+            enabled: true
+        
