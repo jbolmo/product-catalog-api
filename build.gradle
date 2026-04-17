@@ -56,9 +56,9 @@ openApi {
 	apiDocsUrl = 'http://localhost:8080/v3/api-docs.yaml'
 	outputFileName = 'openapi.yaml'
 	outputDir = file('docs')
-	forkProperties = '-Dspring.profiles.active=docs'
 	customBootRun {
 		classpath = sourceSets.test.runtimeClasspath
+		jvmArgs = ['-Dspring.profiles.active=docs']
 	}
 }
 
