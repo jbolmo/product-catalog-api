@@ -4,4 +4,25 @@ spring:
     threads:
         virtual:
             enabled: true
-        
+    cloud:
+        gcp:
+            sql:
+                instance-connection-name: ${DB_INSTANCE_CONNECTION_NAME:product-catalog-instance}
+                database-name: ${DB_NAME:product_catalog_db}
+    datasource:
+        username: ${DB_USER:db_admin}
+        password: ${DB_PASSWORD:c4t4l0g0.Pr0duct}
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: false
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+    jackson:
+        deserialization:
+            fail-on-unknown-properties: true
+
+springdoc:
+    swagger-ui:
+        path: /swagger-ui.html

@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.5.13'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id 'org.springdoc.openapi-gradle-plugin' version '1.9.0'
 }
 
 group = 'com.javier.gapsi.product.catalog'
@@ -48,6 +49,16 @@ dependencyManagement {
 	imports {
 		mavenBom "com.google.cloud:spring-cloud-gcp-dependencies:${springCloudGcpVersion}"
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+openApi {
+	apiDocsUrl = 'http://localhost:8080/v3/api-docs.yaml'
+	outputFileName = 'openapi.yaml'
+	outputDir = file('docs')
+	forkProperties = '-Dspring.profiles.active=docs'
+	customBootRun {
+		classpath = sourceSets.test.runtimeClasspath
 	}
 }
 
